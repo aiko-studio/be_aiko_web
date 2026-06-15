@@ -13,7 +13,7 @@ export const handleTranspile = (req, res) => {
     fs.writeFileSync(inputFile, code);
 
     const relativePath = path.relative(AIKO_JS_DIR, inputFile);
-    const runScript = path.resolve(AIKO_JS_DIR, "run_fs.sh");
+    const runScript = path.resolve(AIKO_JS_DIR, "aiko");
 
     const child = spawn("bash", [runScript, relativePath], { cwd: AIKO_JS_DIR });
 
