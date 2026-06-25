@@ -1,2 +1,3 @@
-var x = 'woi';
-print(len(x));
+use std.math
+
+print(math.abs(-100));

@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors());
 
 
-
+app.get("/", (_, res) => res.json({ status: "ok", message: "Aiko Backend connected" }));
 
 // Endpoint utama
 app.use("/api/", transpileRoutes);
